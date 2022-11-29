@@ -1,0 +1,65 @@
+﻿@model BaiTapNho.models.Member
+@{
+
+    ViewBag.Title = "Login form";
+
+}
+
+@using (Html.BeginForm("Index", "Home"))
+
+{
+
+    <span style="font-weight:bolder; font-size:16px; color:red;">@ViewBag.Message</span>
+
+    <div>
+
+        <h2>User Login</h2>
+
+        <div class="row">
+
+            <div class="form-group col-6">
+
+                <lable for="loginid">Login Id</lable>
+
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-6">
+
+                <lable for="loginid">Password</lable>
+
+                @Html.PasswordFor(m => m.Password , new { @class = "form-control" })
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-12">
+
+                <input type="submit" value="Submit" />
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="form-group col-12">
+
+            <a href="/Registration">Click to Register</a>
+
+        </div>
+
+    </div>
+
+}
+
